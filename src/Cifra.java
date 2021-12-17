@@ -3,25 +3,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// Alunos: Akinn e Danilo
+
 class Teste {
     public static void main(String[] args) {
-        Cifra rot7 = new Cifra(7);
+        Cifra rot13 = new Cifra(13);
 
-        System.out.println("PALAVRAS CIFRADAS:");
-        System.out.println(rot7.cifrar("ração"));
-        System.out.println(rot7.cifrar("Bloco b"));
+        System.out.println(rot13.cifrar("Ifsc"));
+        System.out.println(rot13.cifrar("segurança da informação"));
 
-        System.out.println();
-        System.out.println("PALAVRAS DECIFRADAS:");
-        System.out.println(rot7.decifrar("xgigu"));
-        System.out.println(rot7.decifrar("Hruiu h"));
+        System.out.println(rot13.decifrar("Txpx ng doúqg"));
+        System.out.println(rot13.decifrar("ôglcúngno"));
     }
 }
 
 public class Cifra {
     private final List<Character>
-            alfabeto = Arrays.asList('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'),
-            alfabetoRotacionado = new ArrayList<>();
+        alfabeto = Arrays.asList('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'),
+        alfabetoRotacionado = new ArrayList<>();
 
     public Cifra(int rotacao) {
         incluirRotacaoNoAlfabeto(rotacao);
